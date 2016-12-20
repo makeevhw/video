@@ -455,7 +455,10 @@ void decoder::on_picture_decoded(int32_t result, PP_VideoPicture picture)
     for (uint32_t i = 0; i < interval_n; ++i)
     {
         if (decode_latency > time)
+        {
+            time += 5.0;
             continue;
+        }
 
         ++stats_[i];
         break;
