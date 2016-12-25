@@ -44,10 +44,10 @@
     handleMessage = function(msg) {
         let strMsg = msg.data
         if (strMsg.startsWith('stat')) {
-            console.info(msg.substr(4))
+            console.info(strMsg.toString())
         }
         else {
-            console.log(strMsg)
+            console.log(strMsg.toString())
         }
     }
 </script>
